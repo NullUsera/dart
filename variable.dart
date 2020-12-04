@@ -40,4 +40,12 @@ void main() {
     ..write("flutter")
     ..write('dart')
     ..toString();
+
+  //闭包函数
+  Function function(int a) {
+    return (int b) => a + b;
+  }
+
+  var add = function(10); //a=10
+  print(add(20)); //b=20
 }

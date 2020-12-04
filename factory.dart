@@ -8,10 +8,10 @@ void main() {
 //工厂构造函数factory无法访问this
 //工厂构造函数不会自动生成实例，通过代码来决定返回实例对象
 class Singleton {
-
   String name;
   static Singleton _singleton;
 
+  //重命名构造函数
   Singleton._newObject(this.name);
 
   // factory Singleton([String name = "Singleton"]) {

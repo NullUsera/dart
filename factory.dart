@@ -25,3 +25,13 @@ class Singleton {
   factory Singleton([String name = "Singleton"]) =>
       Singleton._singleton ?? Singleton._newObject(name);
 }
+
+class SingleTon2 {
+  static SingleTon2 _instance;
+
+  SingleTon2._newInstance();
+
+  factory SingleTon2() {
+    return SingleTon2._instance ?? SingleTon2._newInstance();
+  }
+}

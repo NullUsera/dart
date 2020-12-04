@@ -8,6 +8,8 @@ void main() {
   print(point2.y); //使用默认值10
 }
 
+//dart中所有的类都可以当接口
+
 class Point {
   int x, y;
 
@@ -22,6 +24,11 @@ class Point {
 
   //重定向构造函数(使用冒号调用其他构造函数)
   Point.alongX(int x) : this(x, 10);
+
+  // set() get()格式
+  int get z => x + y;
+
+  set z(int q) => x + q;
 }
 
 class XPoint extends Point {

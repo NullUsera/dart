@@ -1,4 +1,17 @@
+import 'myLib.dart' as lib1; //导入文件
+import 'myLib.dart' show Test; //只导入Test文件
+import 'myLib.dart' hide Test; //除了Test其他都导入
+import 'myLib.dart' deferred as lazyLib;
+
+void lazyLoad() async {
+  await lazyLib.loadLibrary();
+}
+
 void main() {
+  MyLib.printMsg();
+  lib1.Test.printMsg();
+  Test.printMsg();
+
   int sum(int a, int b) => a + b;
   //可选命名参数
   int sum1({int a, int b}) {
